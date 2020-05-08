@@ -220,7 +220,3 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Dot_props
 $(call inherit-product, vendor/dot/config/dot_props.mk)
-
-# Ad-block hosts
-PRODUCT_COPY_FILES += \
-    vendor/aicp/prebuilt/common/etc/hosts.aicp_adblock:system/etc/hosts.aicp_adblock

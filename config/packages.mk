@@ -92,6 +92,10 @@ PRODUCT_PACKAGES += \
     StitchImage \
     Music
 
+# AICP Ad-block
+PRODUCT_PACKAGES += \
+    hosts.aicp_adblock
+
 ifeq ($(DOT_OFFICIAL), true)
 PRODUCT_PACKAGES += \
     SystemUpdates
