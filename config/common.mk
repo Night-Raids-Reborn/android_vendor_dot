@@ -218,5 +218,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
 
+# Spoof fingerprint for Google Play Services and SafetyNet
+ifeq ($(PRODUCT_OVERRIDE_GMS_FINGERPRINT),)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_fingerprint=google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
+else
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_fingerprint=$(PRODUCT_OVERRIDE_GMS_FINGERPRINT)
+endif
+
 # Dot_props
 $(call inherit-product, vendor/dot/config/dot_props.mk)
