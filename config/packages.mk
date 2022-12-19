@@ -90,7 +90,8 @@ PRODUCT_PACKAGES += \
     BatteryManager \
     Seedvault \
     StitchImage \
-    Music
+    Music \
+    SoftAPManager
 
 # AICP Ad-block
 PRODUCT_PACKAGES += \
