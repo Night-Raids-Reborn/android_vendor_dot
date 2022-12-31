@@ -184,8 +184,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Gapps
 ifeq ($(WITH_GAPPS), true)
-    WITH_GMS := true
-    $(call inherit-product, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/gapps/gapps.mk)
 endif
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
@@ -226,7 +225,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_fingerprint=$(PRODUCT_OVERRIDE
 endif
 
 # Include Lawnchair
-ifeq ($(USE_LAWNCHAIR),true)
+ifeq ($(USE_LAWNCHAIR), true)
 $(call inherit-product, vendor/lawnchair/lawnchair.mk)
 endif
 
