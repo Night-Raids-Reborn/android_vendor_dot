@@ -225,5 +225,10 @@ else
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.build.gms_fingerprint=$(PRODUCT_OVERRIDE_GMS_FINGERPRINT)
 endif
 
+# Include Lawnchair
+ifeq ($(USE_LAWNCHAIR),true)
+$(call inherit-product, vendor/lawnchair/lawnchair.mk)
+endif
+
 # Dot_props
 $(call inherit-product, vendor/dot/config/dot_props.mk)
