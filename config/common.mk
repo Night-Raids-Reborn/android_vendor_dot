@@ -184,7 +184,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Gapps
 ifeq ($(WITH_GAPPS), true)
-$(call inherit-product, vendor/gapps/gapps.mk)
+$(call inherit-product, vendor/gapps/config.mk)
 endif
 
 PRODUCT_EXTRA_RECOVERY_KEYS += \
