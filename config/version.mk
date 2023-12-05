@@ -16,7 +16,7 @@
 DOT_MOD_VERSION = v5.9.7
 
 ifndef DOT_BUILD_TYPE
-    DOT_BUILD_TYPE := UNOFFICIAL
+    DOT_BUILD_TYPE := MOD
 endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
@@ -34,9 +34,9 @@ ifeq ($(DOT_OFFICIAL), true)
       endif
     endif
     ifneq ($(IS_OFFICIAL), true)
-       DOT_BUILD_TYPE := UNOFFICIAL
+       DOT_BUILD_TYPE := MOD
        ifeq ($(WITH_GAPPS), true)
-	 DOT_BUILD_TYPE := UNOFFICIAL_GAPPS
+	 DOT_BUILD_TYPE := MOD_GAPPS
        endif
        $(error Device is not official "$(FOUND)")
     endif
