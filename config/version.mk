@@ -13,10 +13,10 @@
 # limitations under the License.
 
 #dotOS Versioning :
-DOT_MOD_VERSION = v5.9.7
+DOT_MOD_VERSION = v5.9.9
 
 ifndef DOT_BUILD_TYPE
-    DOT_BUILD_TYPE := MOD
+    DOT_BUILD_TYPE := Final
 endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
